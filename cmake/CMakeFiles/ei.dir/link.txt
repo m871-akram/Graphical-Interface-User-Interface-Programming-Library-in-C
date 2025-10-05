@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libei.a CMakeFiles/ei.dir/implem/ei_implementation.c.o CMakeFiles/ei.dir/implem/ei_draw.c.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libei.a
