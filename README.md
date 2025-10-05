@@ -151,13 +151,8 @@ The generated documentation will be available in the `docs/` directory.
 - **macOS**: Full support via MacPorts
 - **Windows**: Full support with pre-configured SDL2 libraries
 
-## 📄 License
 
-Please refer to the project documentation for licensing information.
 
-## 👥 Contributing
-
-This appears to be an academic project. Please follow your institution's guidelines for collaboration and contribution.
 
 ## 🔗 Resources
 
