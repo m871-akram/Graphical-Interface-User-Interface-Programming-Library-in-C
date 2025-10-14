@@ -21,13 +21,13 @@ ei_widget_t ei_widget_create(ei_const_string_t class_name, ei_widget_t parent, e
     ei_widgetclass_t* wclass = ei_widgetclass_from_name(class_name);
     if (wclass == NULL) return NULL;
 
-    // Allouer la mémoire pour le widget
+    // Allouer la mémoire pour le widget via l'allocateur de la classe
     ei_widget_t widget = wclass->allocfunc();
     if (widget == NULL) {
         return NULL; // Échec de l'allocation
     }
 
-    // Initialiser les champs de la structure
+    // Initialiser les champs communs
     ei_impl_widget_t* impl_widget = (ei_impl_widget_t*)widget;
     impl_widget->wclass = wclass;
     impl_widget->pick_id = (uint32_t)(intptr_t)widget; // Utiliser l'adresse comme ID unique
@@ -44,12 +44,11 @@ ei_widget_t ei_widget_create(ei_const_string_t class_name, ei_widget_t parent, e
     impl_widget->placer_params = NULL;
     impl_widget->requested_size = ei_size_zero();
     impl_widget->screen_location = ei_rect_zero();
-    impl_widget->content_rect = &impl_widget->screen_location; // Par défaut, pointe vers screen_location
-
+    // Ne pas écraser content_rect ici: l'allocateur de classe peut l'avoir initialisé (ex: toplevel)
 
     // Ajouter le widget comme dernier enfant du parent
-    if (parent != NULL) { // Ajouter cette condition
-        ei_impl_widget_t* parent_impl = (ei_impl_widget_t*)parent; // Déplacer la déclaration ici
+    if (parent != NULL) {
+        ei_impl_widget_t* parent_impl = (ei_impl_widget_t*)parent;
         if (parent_impl->children_head == NULL) {
             parent_impl->children_head = widget;
             parent_impl->children_tail = widget;
@@ -57,26 +56,23 @@ ei_widget_t ei_widget_create(ei_const_string_t class_name, ei_widget_t parent, e
             ((ei_impl_widget_t*)parent_impl->children_tail)->next_sibling = widget;
             parent_impl->children_tail = widget;
         }
-
-        ei_app_invalidate_rect(ei_widget_get_screen_location(parent)); // commenter si nécessaire après d'autres corrections
+        ei_app_invalidate_rect(ei_widget_get_screen_location(parent));
     }
 
-    // Définir les valeurs par défaut de la classe
+    // Définir les valeurs par défaut de la classe (une seule fois)
     wclass->setdefaultsfunc(widget);
 
+    if (impl_widget->content_rect == NULL) {
+        // Par défaut, si la classe ne l'a pas configuré, pointer vers screen_location
+        impl_widget->content_rect = &impl_widget->screen_location;
+    }
 
     if (parent != NULL) {
-        ei_app_invalidate_rect(ei_widget_get_screen_location(parent)); // Peut-être mieux ici ou après ei_place
+        ei_app_invalidate_rect(ei_widget_get_screen_location(parent));
     }
 
-
-        // ...
-        impl_widget->content_rect = &impl_widget->screen_location; // Par défaut
-        // ...
-        wclass->setdefaultsfunc(widget); // Si setdefaults (comme pour toplevel) alloue son propre content_rect, il écrasera ce pointeur.
-        // ...
-        return widget;
-    }
+    return widget;
+}
 
 void ei_widget_destroy(ei_widget_t widget) {
     assert(widget != NULL && "hmm , un widget NULL !! ");
@@ -135,10 +131,9 @@ void ei_widget_destroy(ei_widget_t widget) {
         impl_widget->wclass->releasefunc(widget);
     }
 
-    // Libérer la mémoire allouée pour content_rect si ce n'est pas screen_location ( je pense qu on peu supp cette section )
-    if (impl_widget->content_rect != &impl_widget->screen_location) {
-        free(impl_widget->content_rect);
-    }
+    // Ne pas libérer impl_widget->content_rect ici : il n'est pas toujours alloué dynamiquement
+    // et peut pointer vers screen_location ou une zone interne d'un widget spécialisé (ex: toplevel).
+    // La libération spécifique doit être gérée par la releasefunc de la classe si nécessaire.
 
     // Libérer la mémoire du widget
     free(widget);
@@ -147,6 +142,23 @@ void ei_widget_destroy(ei_widget_t widget) {
 bool ei_widget_is_displayed(ei_widget_t widget) {
     assert(widget != NULL && "hmm , un widget NULL !! ");
     return ((ei_impl_widget_t*)widget)->placer_params != NULL;
+}
+
+// Helper: depth-first search to find widget by pick color.
+static ei_widget_t find_widget_by_pick_color(ei_widget_t root, const ei_color_t* color) {
+    if (root == NULL || color == NULL) return NULL;
+    ei_impl_widget_t* impl = (ei_impl_widget_t*)root;
+    if (memcmp(&impl->pick_color, color, sizeof(ei_color_t)) == 0) {
+        return root;
+    }
+    // Traverse children
+    ei_widget_t child = impl->children_head;
+    while (child) {
+        ei_widget_t found = find_widget_by_pick_color(child, color);
+        if (found) return found;
+        child = ((ei_impl_widget_t*)child)->next_sibling;
+    }
+    return NULL;
 }
 
 ei_widget_t ei_widget_pick(ei_point_t* where) {
@@ -189,21 +201,12 @@ ei_widget_t ei_widget_pick(ei_point_t* where) {
     // Déverrouiller la surface
     hw_surface_unlock(pick_surface);
 
-    // Si le pixel est transparent ou noir, aucun widget n'est présent
-    if (pixel_color.red == 0 && pixel_color.green == 0 && pixel_color.blue == 0 && pixel_color.alpha == 0) {
+    // Si l'alpha est 0 (couleur de fond du pick surface), aucun widget
+    if (pixel_color.alpha == 0) {
         return NULL;
     }
 
-    // Convertir la couleur en pick_id
-    uint32_t pick_id = (pixel_color.red << 24) | (pixel_color.green << 16) | (pixel_color.blue << 8) | pixel_color.alpha;
-    ei_widget_t widget = (ei_widget_t)(intptr_t)pick_id;
-
-    // Vérifier que le widget existe et que sa pick_color correspond
-    ei_impl_widget_t* impl_widget = (ei_impl_widget_t*)widget;
-    if (impl_widget != NULL && memcmp(&impl_widget->pick_color, &pixel_color, sizeof(ei_color_t)) == 0) {
-        return widget;
-    }
-
-
-    return NULL;
+    // Rechercher dans l'arbre le widget correspondant à cette pick_color
+    ei_widget_t root = ei_app_root_widget();
+    return find_widget_by_pick_color(root, &pixel_color);
 }

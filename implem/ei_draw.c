@@ -258,6 +258,9 @@ int ei_copy_surface(ei_surface_t destination,
         return 1;
     }
 
+    // Lock source surface to safely access its buffer.
+    hw_surface_lock(source);
+
     // Get pixel buffers and channel indices
     uint8_t* dst_buffer = hw_surface_get_buffer(destination);
     uint8_t* src_buffer = hw_surface_get_buffer(source);
@@ -304,6 +307,9 @@ int ei_copy_surface(ei_surface_t destination,
             }
         }
     }
+
+    // Unlock the source surface now that we are done reading from it.
+    hw_surface_unlock(source);
 
     return 0;
 }

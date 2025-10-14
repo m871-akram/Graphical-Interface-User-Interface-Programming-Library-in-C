@@ -17,7 +17,7 @@
 
 // Variables globales
 static ei_surface_t g_root_surface = NULL;
-static ei_surface_t g_pick_surface = NULL;
+extern ei_surface_t pick_surface;
 static ei_widget_t g_root_widget = NULL;
 static bool g_application_quit_request = false;
 static ei_linked_rect_t* g_invalidated_rects_head = NULL;
@@ -68,8 +68,8 @@ void ei_app_create(ei_size_t main_window_size, bool fullscreen) {
     }
 
     // Créer la surface de picking
-    g_pick_surface = hw_surface_create(g_root_surface, main_window_size, false);
-    if (!g_pick_surface) {
+    pick_surface = hw_surface_create(g_root_surface, main_window_size, false);
+    if (!pick_surface) {
         fprintf(stderr, "Erreur: Impossible de créer la surface de picking.\n");
         hw_surface_free(g_root_surface);
         hw_text_font_free(ei_default_font);
@@ -81,7 +81,7 @@ void ei_app_create(ei_size_t main_window_size, bool fullscreen) {
     g_root_widget = ei_widget_create("frame", NULL, NULL, NULL);
     if (!g_root_widget) {
         fprintf(stderr, "Erreur: Impossible de créer le widget racine.\n");
-        hw_surface_free(g_pick_surface);
+        hw_surface_free(pick_surface);
         hw_surface_free(g_root_surface);
         hw_text_font_free(ei_default_font);
         hw_quit();
@@ -107,20 +107,20 @@ static void redraw_invalidated_areas(void) {
     }
 
     hw_surface_lock(g_root_surface);
-    hw_surface_lock(g_pick_surface);
+    hw_surface_lock(pick_surface);
 
     // Effacer la pick_surface
-    ei_color_t pick_clear_color = {0, 0, 0, 0xff};
-    ei_fill(g_pick_surface, &pick_clear_color, NULL);
+    ei_color_t pick_clear_color = {0, 0, 0, 0x00};
+    ei_fill(pick_surface, &pick_clear_color, NULL);
 
     // Dessiner chaque rectangle invalidé
     ei_linked_rect_t* current = g_invalidated_rects_head;
     while (current) {
-        g_root_widget->wclass->drawfunc(g_root_widget, g_root_surface, g_pick_surface, &current->rect);
+        g_root_widget->wclass->drawfunc(g_root_widget, g_root_surface, pick_surface, &current->rect);
         current = current->next;
     }
 
-    hw_surface_unlock(g_pick_surface);
+    hw_surface_unlock(pick_surface);
     hw_surface_unlock(g_root_surface);
 
     // Mettre à jour l'écran
@@ -215,9 +215,9 @@ void ei_app_free(void) {
     }
 
     // Libérer les surfaces
-    if (g_pick_surface) {
-        hw_surface_free(g_pick_surface);
-        g_pick_surface = NULL;
+    if (pick_surface) {
+        hw_surface_free(pick_surface);
+        pick_surface = NULL;
     }
     if (g_root_surface) {
         hw_surface_free(g_root_surface);
