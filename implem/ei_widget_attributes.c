@@ -78,10 +78,7 @@ void ei_widget_set_content_rect(ei_widget_t widget, const ei_rect_t* content_rec
     }
     // Copier le nouveau rectangle
     *impl_widget->content_rect = *content_rect;
-    // Si le widget est géré par le placeur, recalculer sa géométrie
-    if (impl_widget->placer_params != NULL) {
-        ei_impl_placer_run(widget);
-    }
+
     // Invalider la zone pour redessiner
     ei_app_invalidate_rect(&impl_widget->screen_location);
 }

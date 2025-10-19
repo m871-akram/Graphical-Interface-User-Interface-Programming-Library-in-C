@@ -507,7 +507,7 @@ int main(int argc, char* argv[])
 	ei_app_create(g_root_window_size, fullscreen);
 	ei_frame_configure(ei_app_root_widget(), NULL, &root_bgcol, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
-	// Start with a single game window to avoid duplicate windows on launch.
+	new_game(4, 4, 80, 4);
 	new_game(4, 4, 100, 4);
 
 	ei_event_set_default_handle_func(global_event_handler);

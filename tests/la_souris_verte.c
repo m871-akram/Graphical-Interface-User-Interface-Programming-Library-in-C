@@ -50,6 +50,7 @@ void mouse_tracker_default_handler(ei_event_t* event) {
         (event->type == ei_ev_keydown && event->param.key_code == SDLK_ESCAPE)) {
         ei_app_quit_request();
     } else if (event->type == ei_ev_mouse_move) {
+        printf("[EVENT DEBUG] Mouse move at (%d,%d)\n", event->param.mouse.where.x, event->param.mouse.where.y);
         g_mouse_position = event->param.mouse.where;
 
         ei_widget_t picked_widget = ei_widget_pick(&g_mouse_position);

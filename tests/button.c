@@ -26,7 +26,7 @@ void button_press(ei_widget_t widget, ei_event_t* event, ei_user_param_t user_pa
 void default_handler(ei_event_t* event)
 {
 	if ( (event->type == ei_ev_close) ||
-		((event->type == ei_ev_keydown) && (event->param.key_code == SDLK_ESCAPE)))
+	    ((event->type == ei_ev_keydown) && (event->param.key_code == SDLK_ESCAPE)))
 		ei_app_quit_request();
 }
 
@@ -42,12 +42,12 @@ int main(int argc, char** argv)
 	button = ei_widget_create	("button", ei_app_root_widget(), NULL, NULL);
 	ei_button_configure		(button, &((ei_size_t){300, 200}),
 						&(ei_color_t){0x88, 0x88, 0x88, 0xff},
-						 &(int){6},
-						 &(int){40},
-						 &(ei_relief_t){ei_relief_raised},
-						 &(ei_string_t){"Mon premier Bouton !"}, NULL,
-						 &(ei_color_t){0x00, 0x00, 0x00, 0xff}, NULL, NULL, NULL, NULL,
-						 &(ei_callback_t){button_press}, NULL);
+					 	&(int){6},
+					 	&(int){40},
+					 	&(ei_relief_t){ei_relief_raised},
+					 	&(ei_string_t){"Mon premier Bouton !"}, NULL,
+					 	&(ei_color_t){0x00, 0x00, 0x00, 0xff}, NULL, NULL, NULL, NULL,
+					 	&(ei_callback_t){button_press}, NULL);
 	ei_place_xy			(button, 150, 200);
 
 	/* Register the default callback. */

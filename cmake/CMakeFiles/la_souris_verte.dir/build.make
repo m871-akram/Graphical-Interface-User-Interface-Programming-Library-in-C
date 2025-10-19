@@ -76,15 +76,15 @@ CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o: CMakeFiles/la_souris_v
 CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/la_souris_verte.c
 CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o: CMakeFiles/la_souris_verte.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o -MF CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o.d -o CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/la_souris_verte.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o -MF CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o.d -o CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/la_souris_verte.c
 
 CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/la_souris_verte.c > CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/la_souris_verte.c > CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.i
 
 CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/la_souris_verte.c -o CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/la_souris_verte.c -o CMakeFiles/la_souris_verte.dir/tests/la_souris_verte.c.s
 
 # Object files for target la_souris_verte
 la_souris_verte_OBJECTS = \

@@ -76,15 +76,15 @@ CMakeFiles/lines.dir/tests/lines.c.o: CMakeFiles/lines.dir/flags.make
 CMakeFiles/lines.dir/tests/lines.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/lines.c
 CMakeFiles/lines.dir/tests/lines.c.o: CMakeFiles/lines.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lines.dir/tests/lines.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lines.dir/tests/lines.c.o -MF CMakeFiles/lines.dir/tests/lines.c.o.d -o CMakeFiles/lines.dir/tests/lines.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/lines.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lines.dir/tests/lines.c.o -MF CMakeFiles/lines.dir/tests/lines.c.o.d -o CMakeFiles/lines.dir/tests/lines.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/lines.c
 
 CMakeFiles/lines.dir/tests/lines.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/lines.dir/tests/lines.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/lines.c > CMakeFiles/lines.dir/tests/lines.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/lines.c > CMakeFiles/lines.dir/tests/lines.c.i
 
 CMakeFiles/lines.dir/tests/lines.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/lines.dir/tests/lines.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/lines.c -o CMakeFiles/lines.dir/tests/lines.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/lines.c -o CMakeFiles/lines.dir/tests/lines.c.s
 
 # Object files for target lines
 lines_OBJECTS = \

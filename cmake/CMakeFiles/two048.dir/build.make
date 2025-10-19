@@ -76,15 +76,15 @@ CMakeFiles/two048.dir/tests/two048.c.o: CMakeFiles/two048.dir/flags.make
 CMakeFiles/two048.dir/tests/two048.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/two048.c
 CMakeFiles/two048.dir/tests/two048.c.o: CMakeFiles/two048.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/two048.dir/tests/two048.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/two048.dir/tests/two048.c.o -MF CMakeFiles/two048.dir/tests/two048.c.o.d -o CMakeFiles/two048.dir/tests/two048.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/two048.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/two048.dir/tests/two048.c.o -MF CMakeFiles/two048.dir/tests/two048.c.o.d -o CMakeFiles/two048.dir/tests/two048.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/two048.c
 
 CMakeFiles/two048.dir/tests/two048.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/two048.dir/tests/two048.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/two048.c > CMakeFiles/two048.dir/tests/two048.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/two048.c > CMakeFiles/two048.dir/tests/two048.c.i
 
 CMakeFiles/two048.dir/tests/two048.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/two048.dir/tests/two048.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/two048.c -o CMakeFiles/two048.dir/tests/two048.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/two048.c -o CMakeFiles/two048.dir/tests/two048.c.s
 
 # Object files for target two048
 two048_OBJECTS = \

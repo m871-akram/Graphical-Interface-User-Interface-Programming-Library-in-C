@@ -76,15 +76,15 @@ CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o: CMakeFiles/ext_testclass.d
 CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/ext_testclass.c
 CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o: CMakeFiles/ext_testclass.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o -MF CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o.d -o CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/ext_testclass.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o -MF CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o.d -o CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/ext_testclass.c
 
 CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/ext_testclass.c > CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/ext_testclass.c > CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.i
 
 CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/ext_testclass.c -o CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/ext_testclass.c -o CMakeFiles/ext_testclass.dir/tests/ext_testclass.c.s
 
 # Object files for target ext_testclass
 ext_testclass_OBJECTS = \

@@ -76,15 +76,15 @@ CMakeFiles/minimal.dir/tests/minimal.c.o: CMakeFiles/minimal.dir/flags.make
 CMakeFiles/minimal.dir/tests/minimal.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minimal.c
 CMakeFiles/minimal.dir/tests/minimal.c.o: CMakeFiles/minimal.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minimal.dir/tests/minimal.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minimal.dir/tests/minimal.c.o -MF CMakeFiles/minimal.dir/tests/minimal.c.o.d -o CMakeFiles/minimal.dir/tests/minimal.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minimal.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minimal.dir/tests/minimal.c.o -MF CMakeFiles/minimal.dir/tests/minimal.c.o.d -o CMakeFiles/minimal.dir/tests/minimal.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minimal.c
 
 CMakeFiles/minimal.dir/tests/minimal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minimal.dir/tests/minimal.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minimal.c > CMakeFiles/minimal.dir/tests/minimal.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minimal.c > CMakeFiles/minimal.dir/tests/minimal.c.i
 
 CMakeFiles/minimal.dir/tests/minimal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minimal.dir/tests/minimal.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minimal.c -o CMakeFiles/minimal.dir/tests/minimal.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minimal.c -o CMakeFiles/minimal.dir/tests/minimal.c.s
 
 # Object files for target minimal
 minimal_OBJECTS = \

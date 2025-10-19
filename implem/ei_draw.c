@@ -12,12 +12,8 @@ void ei_fill(ei_surface_t surface, const ei_color_t* couleur, const ei_rect_t* c
     uint8_t* pixel_0 = hw_surface_get_buffer(surface);
     ei_size_t taille_surface = hw_surface_get_size(surface);
 
-    // On transforme la couleur en un format que l'écran comprend (Mac/Windows ou Linux, c'est pas pareil)
-    #if defined(_APPLE_) || defined(_WIN32)
-        uint32_t valeur_pixel = ei_impl_map_rgba(surface, *couleur);
-    #else
-        uint32_t valeur_pixel = *((uint32_t*)&*couleur);
-    #endif
+    // Convertir la couleur selon l'ordre des canaux de la surface (toujours via map_rgba pour éviter les erreurs de canaux/alpha)
+    uint32_t valeur_pixel = ei_impl_map_rgba(surface, *couleur);
 
     // On définit la zone qu’on va remplir (le clipper, c’est comme une fenêtre où on a le droit de peindre)
     int clip_xmin = 0, clip_ymin = 0, clip_xmax = taille_surface.width - 1, clip_ymax = taille_surface.height - 1;

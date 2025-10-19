@@ -109,7 +109,7 @@ void handle_tile_press(ei_widget_t widget, ei_event_t* event, ei_user_param_t us
 	ei_point_t	swap_pos;
 	ei_point_t	swap_coordinates;
 	int		i;
-
+	
 	for (i = 0; i < 4; i++) {
 		swap_pos	= ei_point_add(current, offsets[i]);
 		if (valid(puzzle, swap_pos) && tile_at(puzzle, swap_pos) == NULL) {
@@ -150,7 +150,7 @@ void create_puzzle_window(ei_string_t image_filename)
 	ei_rect_t		img_rect;
 	ei_rect_ptr_t		img_rect_ptr		= &img_rect;
 	ei_callback_t		callback		= handle_tile_press;
-
+	
 	puzzle_t*		puzzle;
 	tile_t*			tile;
 
@@ -249,8 +249,9 @@ int main(int argc, char* argv[])
 	ei_event_set_default_handle_func(global_handler);
 
 	ei_app_run();
-
+	
 	ei_app_free();
 
 	return (EXIT_SUCCESS);
 }
+

@@ -76,141 +76,141 @@ CMakeFiles/ei.dir/implem/ei_draw.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_draw.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_draw.c
 CMakeFiles/ei.dir/implem/ei_draw.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ei.dir/implem/ei_draw.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_draw.c.o -MF CMakeFiles/ei.dir/implem/ei_draw.c.o.d -o CMakeFiles/ei.dir/implem/ei_draw.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_draw.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_draw.c.o -MF CMakeFiles/ei.dir/implem/ei_draw.c.o.d -o CMakeFiles/ei.dir/implem/ei_draw.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_draw.c
 
 CMakeFiles/ei.dir/implem/ei_draw.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_draw.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_draw.c > CMakeFiles/ei.dir/implem/ei_draw.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_draw.c > CMakeFiles/ei.dir/implem/ei_draw.c.i
 
 CMakeFiles/ei.dir/implem/ei_draw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_draw.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_draw.c -o CMakeFiles/ei.dir/implem/ei_draw.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_draw.c -o CMakeFiles/ei.dir/implem/ei_draw.c.s
 
 CMakeFiles/ei.dir/implem/ei_implementation.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_implementation.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_implementation.c
 CMakeFiles/ei.dir/implem/ei_implementation.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ei.dir/implem/ei_implementation.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_implementation.c.o -MF CMakeFiles/ei.dir/implem/ei_implementation.c.o.d -o CMakeFiles/ei.dir/implem/ei_implementation.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_implementation.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_implementation.c.o -MF CMakeFiles/ei.dir/implem/ei_implementation.c.o.d -o CMakeFiles/ei.dir/implem/ei_implementation.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_implementation.c
 
 CMakeFiles/ei.dir/implem/ei_implementation.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_implementation.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_implementation.c > CMakeFiles/ei.dir/implem/ei_implementation.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_implementation.c > CMakeFiles/ei.dir/implem/ei_implementation.c.i
 
 CMakeFiles/ei.dir/implem/ei_implementation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_implementation.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_implementation.c -o CMakeFiles/ei.dir/implem/ei_implementation.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_implementation.c -o CMakeFiles/ei.dir/implem/ei_implementation.c.s
 
 CMakeFiles/ei.dir/implem/ei_relief.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_relief.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_relief.c
 CMakeFiles/ei.dir/implem/ei_relief.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ei.dir/implem/ei_relief.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_relief.c.o -MF CMakeFiles/ei.dir/implem/ei_relief.c.o.d -o CMakeFiles/ei.dir/implem/ei_relief.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_relief.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_relief.c.o -MF CMakeFiles/ei.dir/implem/ei_relief.c.o.d -o CMakeFiles/ei.dir/implem/ei_relief.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_relief.c
 
 CMakeFiles/ei.dir/implem/ei_relief.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_relief.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_relief.c > CMakeFiles/ei.dir/implem/ei_relief.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_relief.c > CMakeFiles/ei.dir/implem/ei_relief.c.i
 
 CMakeFiles/ei.dir/implem/ei_relief.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_relief.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_relief.c -o CMakeFiles/ei.dir/implem/ei_relief.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_relief.c -o CMakeFiles/ei.dir/implem/ei_relief.c.s
 
 CMakeFiles/ei.dir/implem/ei_application.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_application.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_application.c
 CMakeFiles/ei.dir/implem/ei_application.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ei.dir/implem/ei_application.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_application.c.o -MF CMakeFiles/ei.dir/implem/ei_application.c.o.d -o CMakeFiles/ei.dir/implem/ei_application.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_application.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_application.c.o -MF CMakeFiles/ei.dir/implem/ei_application.c.o.d -o CMakeFiles/ei.dir/implem/ei_application.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_application.c
 
 CMakeFiles/ei.dir/implem/ei_application.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_application.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_application.c > CMakeFiles/ei.dir/implem/ei_application.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_application.c > CMakeFiles/ei.dir/implem/ei_application.c.i
 
 CMakeFiles/ei.dir/implem/ei_application.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_application.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_application.c -o CMakeFiles/ei.dir/implem/ei_application.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_application.c -o CMakeFiles/ei.dir/implem/ei_application.c.s
 
 CMakeFiles/ei.dir/implem/ei_placer.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_placer.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_placer.c
 CMakeFiles/ei.dir/implem/ei_placer.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ei.dir/implem/ei_placer.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_placer.c.o -MF CMakeFiles/ei.dir/implem/ei_placer.c.o.d -o CMakeFiles/ei.dir/implem/ei_placer.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_placer.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_placer.c.o -MF CMakeFiles/ei.dir/implem/ei_placer.c.o.d -o CMakeFiles/ei.dir/implem/ei_placer.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_placer.c
 
 CMakeFiles/ei.dir/implem/ei_placer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_placer.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_placer.c > CMakeFiles/ei.dir/implem/ei_placer.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_placer.c > CMakeFiles/ei.dir/implem/ei_placer.c.i
 
 CMakeFiles/ei.dir/implem/ei_placer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_placer.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_placer.c -o CMakeFiles/ei.dir/implem/ei_placer.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_placer.c -o CMakeFiles/ei.dir/implem/ei_placer.c.s
 
 CMakeFiles/ei.dir/implem/ei_widget.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_widget.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget.c
 CMakeFiles/ei.dir/implem/ei_widget.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ei.dir/implem/ei_widget.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widget.c.o -MF CMakeFiles/ei.dir/implem/ei_widget.c.o.d -o CMakeFiles/ei.dir/implem/ei_widget.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widget.c.o -MF CMakeFiles/ei.dir/implem/ei_widget.c.o.d -o CMakeFiles/ei.dir/implem/ei_widget.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget.c
 
 CMakeFiles/ei.dir/implem/ei_widget.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_widget.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget.c > CMakeFiles/ei.dir/implem/ei_widget.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget.c > CMakeFiles/ei.dir/implem/ei_widget.c.i
 
 CMakeFiles/ei.dir/implem/ei_widget.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_widget.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget.c -o CMakeFiles/ei.dir/implem/ei_widget.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget.c -o CMakeFiles/ei.dir/implem/ei_widget.c.s
 
 CMakeFiles/ei.dir/implem/ei_widgetclass.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_widgetclass.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widgetclass.c
 CMakeFiles/ei.dir/implem/ei_widgetclass.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ei.dir/implem/ei_widgetclass.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widgetclass.c.o -MF CMakeFiles/ei.dir/implem/ei_widgetclass.c.o.d -o CMakeFiles/ei.dir/implem/ei_widgetclass.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widgetclass.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widgetclass.c.o -MF CMakeFiles/ei.dir/implem/ei_widgetclass.c.o.d -o CMakeFiles/ei.dir/implem/ei_widgetclass.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widgetclass.c
 
 CMakeFiles/ei.dir/implem/ei_widgetclass.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_widgetclass.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widgetclass.c > CMakeFiles/ei.dir/implem/ei_widgetclass.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widgetclass.c > CMakeFiles/ei.dir/implem/ei_widgetclass.c.i
 
 CMakeFiles/ei.dir/implem/ei_widgetclass.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_widgetclass.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widgetclass.c -o CMakeFiles/ei.dir/implem/ei_widgetclass.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widgetclass.c -o CMakeFiles/ei.dir/implem/ei_widgetclass.c.s
 
 CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_attributes.c
 CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o -MF CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o.d -o CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_attributes.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o -MF CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o.d -o CMakeFiles/ei.dir/implem/ei_widget_attributes.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_attributes.c
 
 CMakeFiles/ei.dir/implem/ei_widget_attributes.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_widget_attributes.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_attributes.c > CMakeFiles/ei.dir/implem/ei_widget_attributes.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_attributes.c > CMakeFiles/ei.dir/implem/ei_widget_attributes.c.i
 
 CMakeFiles/ei.dir/implem/ei_widget_attributes.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_widget_attributes.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_attributes.c -o CMakeFiles/ei.dir/implem/ei_widget_attributes.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_attributes.c -o CMakeFiles/ei.dir/implem/ei_widget_attributes.c.s
 
 CMakeFiles/ei.dir/implem/ei_widget_configure.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_widget_configure.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_configure.c
 CMakeFiles/ei.dir/implem/ei_widget_configure.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ei.dir/implem/ei_widget_configure.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widget_configure.c.o -MF CMakeFiles/ei.dir/implem/ei_widget_configure.c.o.d -o CMakeFiles/ei.dir/implem/ei_widget_configure.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_configure.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_widget_configure.c.o -MF CMakeFiles/ei.dir/implem/ei_widget_configure.c.o.d -o CMakeFiles/ei.dir/implem/ei_widget_configure.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_configure.c
 
 CMakeFiles/ei.dir/implem/ei_widget_configure.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_widget_configure.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_configure.c > CMakeFiles/ei.dir/implem/ei_widget_configure.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_configure.c > CMakeFiles/ei.dir/implem/ei_widget_configure.c.i
 
 CMakeFiles/ei.dir/implem/ei_widget_configure.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_widget_configure.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_configure.c -o CMakeFiles/ei.dir/implem/ei_widget_configure.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_widget_configure.c -o CMakeFiles/ei.dir/implem/ei_widget_configure.c.s
 
 CMakeFiles/ei.dir/implem/ei_event.c.o: CMakeFiles/ei.dir/flags.make
 CMakeFiles/ei.dir/implem/ei_event.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_event.c
 CMakeFiles/ei.dir/implem/ei_event.c.o: CMakeFiles/ei.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ei.dir/implem/ei_event.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_event.c.o -MF CMakeFiles/ei.dir/implem/ei_event.c.o.d -o CMakeFiles/ei.dir/implem/ei_event.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_event.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ei.dir/implem/ei_event.c.o -MF CMakeFiles/ei.dir/implem/ei_event.c.o.d -o CMakeFiles/ei.dir/implem/ei_event.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_event.c
 
 CMakeFiles/ei.dir/implem/ei_event.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ei.dir/implem/ei_event.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_event.c > CMakeFiles/ei.dir/implem/ei_event.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_event.c > CMakeFiles/ei.dir/implem/ei_event.c.i
 
 CMakeFiles/ei.dir/implem/ei_event.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ei.dir/implem/ei_event.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_event.c -o CMakeFiles/ei.dir/implem/ei_event.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/implem/ei_event.c -o CMakeFiles/ei.dir/implem/ei_event.c.s
 
 # Object files for target ei
 ei_OBJECTS = \

@@ -76,15 +76,15 @@ CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o: CMakeFiles/test_d_sor3a.dir/
 CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/test_d_sor3a.c
 CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o: CMakeFiles/test_d_sor3a.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o -MF CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o.d -o CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/test_d_sor3a.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o -MF CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o.d -o CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/test_d_sor3a.c
 
 CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/test_d_sor3a.c > CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/test_d_sor3a.c > CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.i
 
 CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/test_d_sor3a.c -o CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/test_d_sor3a.c -o CMakeFiles/test_d_sor3a.dir/tests/test_d_sor3a.c.s
 
 # Object files for target test_d_sor3a
 test_d_sor3a_OBJECTS = \

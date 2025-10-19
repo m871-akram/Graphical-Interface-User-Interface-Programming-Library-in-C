@@ -67,8 +67,8 @@ void ei_app_create(ei_size_t main_window_size, bool fullscreen) {
         main_window_size = hw_surface_get_size(g_root_surface);
     }
 
-    // Créer la surface de picking
-    pick_surface = hw_surface_create(g_root_surface, main_window_size, false);
+    // Créer la surface de picking (forcer alpha pour faciliter la détection via canal alpha)
+    pick_surface = hw_surface_create(g_root_surface, main_window_size, true);
     if (!pick_surface) {
         fprintf(stderr, "Erreur: Impossible de créer la surface de picking.\n");
         hw_surface_free(g_root_surface);
@@ -109,13 +109,13 @@ static void redraw_invalidated_areas(void) {
     hw_surface_lock(g_root_surface);
     hw_surface_lock(pick_surface);
 
-    // Effacer la pick_surface
-    ei_color_t pick_clear_color = {0, 0, 0, 0x00};
-    ei_fill(pick_surface, &pick_clear_color, NULL);
+    ei_color_t pick_clear_color = (ei_color_t){0, 0, 0, 0x00};
 
     // Dessiner chaque rectangle invalidé
     ei_linked_rect_t* current = g_invalidated_rects_head;
     while (current) {
+        // Réinitialiser uniquement la zone à redessiner pour conserver les couleurs des autres widgets.
+        ei_fill(pick_surface, &pick_clear_color, &current->rect);
         g_root_widget->wclass->drawfunc(g_root_widget, g_root_surface, pick_surface, &current->rect);
         current = current->next;
     }

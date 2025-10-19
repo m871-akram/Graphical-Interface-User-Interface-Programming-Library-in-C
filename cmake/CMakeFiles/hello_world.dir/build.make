@@ -76,15 +76,15 @@ CMakeFiles/hello_world.dir/tests/hello_world.c.o: CMakeFiles/hello_world.dir/fla
 CMakeFiles/hello_world.dir/tests/hello_world.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/hello_world.c
 CMakeFiles/hello_world.dir/tests/hello_world.c.o: CMakeFiles/hello_world.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/hello_world.dir/tests/hello_world.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/hello_world.dir/tests/hello_world.c.o -MF CMakeFiles/hello_world.dir/tests/hello_world.c.o.d -o CMakeFiles/hello_world.dir/tests/hello_world.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/hello_world.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/hello_world.dir/tests/hello_world.c.o -MF CMakeFiles/hello_world.dir/tests/hello_world.c.o.d -o CMakeFiles/hello_world.dir/tests/hello_world.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/hello_world.c
 
 CMakeFiles/hello_world.dir/tests/hello_world.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/hello_world.dir/tests/hello_world.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/hello_world.c > CMakeFiles/hello_world.dir/tests/hello_world.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/hello_world.c > CMakeFiles/hello_world.dir/tests/hello_world.c.i
 
 CMakeFiles/hello_world.dir/tests/hello_world.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/hello_world.dir/tests/hello_world.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/hello_world.c -o CMakeFiles/hello_world.dir/tests/hello_world.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/hello_world.c -o CMakeFiles/hello_world.dir/tests/hello_world.c.s
 
 # Object files for target hello_world
 hello_world_OBJECTS = \

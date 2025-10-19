@@ -76,15 +76,15 @@ CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o: CMakeFiles/dessin_relief.d
 CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/dessin_relief.c
 CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o: CMakeFiles/dessin_relief.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o -MF CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o.d -o CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/dessin_relief.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o -MF CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o.d -o CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/dessin_relief.c
 
 CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/dessin_relief.c > CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/dessin_relief.c > CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.i
 
 CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/dessin_relief.c -o CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/dessin_relief.c -o CMakeFiles/dessin_relief.dir/tests/dessin_relief.c.s
 
 # Object files for target dessin_relief
 dessin_relief_OBJECTS = \

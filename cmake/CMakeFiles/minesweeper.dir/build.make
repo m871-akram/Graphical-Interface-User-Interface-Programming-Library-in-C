@@ -76,15 +76,15 @@ CMakeFiles/minesweeper.dir/tests/minesweeper.c.o: CMakeFiles/minesweeper.dir/fla
 CMakeFiles/minesweeper.dir/tests/minesweeper.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minesweeper.c
 CMakeFiles/minesweeper.dir/tests/minesweeper.c.o: CMakeFiles/minesweeper.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minesweeper.dir/tests/minesweeper.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minesweeper.dir/tests/minesweeper.c.o -MF CMakeFiles/minesweeper.dir/tests/minesweeper.c.o.d -o CMakeFiles/minesweeper.dir/tests/minesweeper.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minesweeper.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/minesweeper.dir/tests/minesweeper.c.o -MF CMakeFiles/minesweeper.dir/tests/minesweeper.c.o.d -o CMakeFiles/minesweeper.dir/tests/minesweeper.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minesweeper.c
 
 CMakeFiles/minesweeper.dir/tests/minesweeper.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/minesweeper.dir/tests/minesweeper.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minesweeper.c > CMakeFiles/minesweeper.dir/tests/minesweeper.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minesweeper.c > CMakeFiles/minesweeper.dir/tests/minesweeper.c.i
 
 CMakeFiles/minesweeper.dir/tests/minesweeper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/minesweeper.dir/tests/minesweeper.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minesweeper.c -o CMakeFiles/minesweeper.dir/tests/minesweeper.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/minesweeper.c -o CMakeFiles/minesweeper.dir/tests/minesweeper.c.s
 
 # Object files for target minesweeper
 minesweeper_OBJECTS = \

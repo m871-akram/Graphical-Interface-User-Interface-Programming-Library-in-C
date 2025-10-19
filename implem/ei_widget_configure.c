@@ -149,6 +149,9 @@ void frame_drawfunc(ei_widget_t widget, ei_surface_t surface, ei_surface_t pick_
         return; // Pas d’intersection
     }
 
+    // D'abord, peindre le widget sur la surface de picking pour que les enfants puissent le recouvrir ensuite.
+    ei_fill(pick_surface, &frame->widget.pick_color, &draw_rect);
+
     // Dessiner le fond
     if (frame->relief == ei_relief_none && frame->border_width == 0) {
         ei_fill(surface, &frame->color, &draw_rect);
@@ -217,9 +220,6 @@ draw_button(surface, &frame->widget.screen_location, 0.0f, frame->color, frame->
     if (intersection_rect(&children_clipper, &content_area, clipper)) {
         ei_impl_widget_draw_children(widget, surface, pick_surface, &children_clipper);
     }
-
-    // Dessiner sur la pick_surface
-    ei_fill(pick_surface, &frame->widget.pick_color, &draw_rect);
 }
 
 void frame_setdefaultsfunc(ei_widget_t widget) {
@@ -475,6 +475,9 @@ void button_drawfunc(ei_widget_t widget, ei_surface_t surface, ei_surface_t pick
         return; // Le widget est entièrement en dehors du clipper global, rien à dessiner
     }
 
+    // Peindre la couleur de picking du bouton en premier afin que ses enfants puissent la recouvrir.
+    ei_fill(pick_surface, &button->widget.pick_color, &clipped_drawing_rect);
+
     // 2. Dessiner le bouton lui-même (fond, relief, bordure)
     //    Cette partie est dessinée sur la totalité de clipped_drawing_rect.
     ei_relief_t current_relief = button->is_pressed ? ei_relief_sunken : button->relief;
@@ -567,9 +570,8 @@ void button_drawfunc(ei_widget_t widget, ei_surface_t surface, ei_surface_t pick
 
     // 7. Dessiner les enfants (clippés par content_clipper)
     ei_impl_widget_draw_children(widget, surface, pick_surface, &content_clipper);
-
-    // 8. Dessiner sur la pick_surface (tout le widget, utilisant clipped_drawing_rect qui est le widget clippé globalement)
-    ei_fill(pick_surface, &button->widget.pick_color, &clipped_drawing_rect);
+    // Important: peindre la surface de picking AVANT les enfants aurait recouvert leur couleur.
+    // Ici, on peint la couleur de picking du bouton dès le début pour que les enfants puissent la recouvrir.
 }
 
 void button_setdefaultsfunc(ei_widget_t widget) {
@@ -604,27 +606,25 @@ bool button_handlefunc(ei_widget_t widget, ei_event_t* event) {
     const ei_rect_t* screen_loc = &button->widget.screen_location;
     bool event_handled = false;
 
-    // Vérifier si le pointeur est dans le bouton
-    bool is_inside = point_in_rect(event->param.mouse.where, screen_loc);
-
     switch (event->type) {
         case ei_ev_mouse_buttondown:
-            printf("Mouse button down detected, is_inside=%d\n", is_inside);
-        if (is_inside && event->param.mouse.button == ei_mouse_button_left) {
-            printf("Setting button to pressed, relief=sunken\n");
-            button->is_pressed = true;
-            button->relief = ei_relief_sunken;
-            ei_event_set_active_widget(widget);
-            ei_app_invalidate_rect(screen_loc);
-            event_handled = true;
-        }
-        break;
+            if (event->param.mouse.button == ei_mouse_button_left &&
+                point_in_rect(event->param.mouse.where, screen_loc)) {
+                bool was_pressed = button->is_pressed;
+                button->is_pressed = true;
+                ei_event_set_active_widget(widget);
+                if (!was_pressed) {
+                    ei_app_invalidate_rect(screen_loc);
+                }
+                event_handled = true;
+            }
+            break;
 
         case ei_ev_mouse_move:
             if (ei_event_get_active_widget() == widget) {
+                bool inside = point_in_rect(event->param.mouse.where, screen_loc);
                 bool was_pressed = button->is_pressed;
-                button->is_pressed = is_inside;
-                button->relief = is_inside ? ei_relief_sunken : ei_relief_raised;
+                button->is_pressed = inside;
                 if (was_pressed != button->is_pressed) {
                     ei_app_invalidate_rect(screen_loc);
                 }
@@ -633,13 +633,16 @@ bool button_handlefunc(ei_widget_t widget, ei_event_t* event) {
             break;
 
         case ei_ev_mouse_buttonup:
-            if (ei_event_get_active_widget() == widget && event->param.mouse.button == ei_mouse_button_left) {
+            if (ei_event_get_active_widget() == widget &&
+                event->param.mouse.button == ei_mouse_button_left) {
                 bool was_pressed = button->is_pressed;
+                bool inside = point_in_rect(event->param.mouse.where, screen_loc);
                 button->is_pressed = false;
-                button->relief = ei_relief_raised;
                 ei_event_set_active_widget(NULL);
-                ei_app_invalidate_rect(screen_loc);
-                if (was_pressed && is_inside && button->callback != NULL) {
+                if (was_pressed) {
+                    ei_app_invalidate_rect(screen_loc);
+                }
+                if (was_pressed && inside && button->callback != NULL) {
                     button->callback(widget, event, button->user_param);
                 }
                 event_handled = true;
@@ -649,9 +652,10 @@ bool button_handlefunc(ei_widget_t widget, ei_event_t* event) {
         case ei_ev_keydown:
             if (ei_event_get_active_widget() == widget &&
                 (event->param.key_code == SDLK_RETURN || event->param.key_code == SDLK_SPACE)) {
-                button->is_pressed = true;
-                button->relief = ei_relief_sunken;
-                ei_app_invalidate_rect(screen_loc);
+                if (!button->is_pressed) {
+                    button->is_pressed = true;
+                    ei_app_invalidate_rect(screen_loc);
+                }
                 event_handled = true;
             }
             break;
@@ -659,11 +663,13 @@ bool button_handlefunc(ei_widget_t widget, ei_event_t* event) {
         case ei_ev_keyup:
             if (ei_event_get_active_widget() == widget &&
                 (event->param.key_code == SDLK_RETURN || event->param.key_code == SDLK_SPACE)) {
+                bool was_pressed = button->is_pressed;
                 button->is_pressed = false;
-                button->relief = ei_relief_raised;
-                ei_app_invalidate_rect(screen_loc);
-                if (button->callback != NULL) {
-                    button->callback(widget, event, button->user_param);
+                if (was_pressed) {
+                    ei_app_invalidate_rect(screen_loc);
+                    if (button->callback != NULL) {
+                        button->callback(widget, event, button->user_param);
+                    }
                 }
                 event_handled = true;
             }
@@ -826,6 +832,9 @@ void toplevel_drawfunc(ei_widget_t widget, ei_surface_t surface, ei_surface_t pi
         return; // Pas d’intersection
     }
 
+    // D'abord, remplir la surface de picking avec la couleur du toplevel.
+    ei_fill(pick_surface, &toplevel->widget.pick_color, &draw_rect);
+
     // Dessiner la bordure
     if (toplevel->border_width > 0) {
         ei_color_t border_color = {0x30, 0x30, 0x30, 0xff};
@@ -882,12 +891,6 @@ void toplevel_drawfunc(ei_widget_t widget, ei_surface_t surface, ei_surface_t pi
         ei_draw_polyline(surface, &lines_x[2], 2, x_color, &toplevel->close_button_rect);
     }
 
-    // Dessiner la poignée de redimensionnement
-    if (toplevel->resizable != ei_axis_none && intersection_rect(&toplevel->resize_handle_rect, &toplevel->resize_handle_rect, &draw_rect)) {
-        ei_color_t resize_color = {0x60, 0x60, 0xff, 0xff};
-        ei_fill(surface, &resize_color, &toplevel->resize_handle_rect);
-    }
-
     // Dessiner le contenu
     if (intersection_rect(toplevel->widget.content_rect, toplevel->widget.content_rect, &draw_rect))  {
         ei_fill(surface, &toplevel->color, toplevel->widget.content_rect);
@@ -899,8 +902,11 @@ void toplevel_drawfunc(ei_widget_t widget, ei_surface_t surface, ei_surface_t pi
         ei_impl_widget_draw_children(widget, surface, pick_surface, &children_clipper);
     }
 
-    // Dessiner sur la pick_surface
-    ei_fill(pick_surface, &toplevel->widget.pick_color, &draw_rect);
+    // Dessiner la poignée de redimensionnement en dernier pour qu'elle reste visible.
+    if (toplevel->resizable != ei_axis_none && intersection_rect(&toplevel->resize_handle_rect, &toplevel->resize_handle_rect, &draw_rect)) {
+        ei_color_t resize_color = (ei_color_t){0x60, 0x60, 0xff, 0xff};
+        ei_fill(surface, &resize_color, &toplevel->resize_handle_rect);
+    }
 }
 
 
@@ -955,6 +961,10 @@ bool toplevel_handlefunc(ei_widget_t widget, ei_event_t* event) {
                     ei_event_set_active_widget(widget);
                     event_handled = true;
                 }
+                else {
+                    // Focus the toplevel so it receives keyboard events.
+                    ei_event_set_active_widget(widget);
+                }
             }
             break;
 
@@ -989,9 +999,12 @@ bool toplevel_handlefunc(ei_widget_t widget, ei_event_t* event) {
 
         case ei_ev_mouse_buttonup:
             if (ei_event_get_active_widget() == widget && event->param.mouse.button == ei_mouse_button_left) {
+                bool was_dragging = toplevel->is_moving || toplevel->is_resizing;
                 toplevel->is_moving = false;
                 toplevel->is_resizing = false;
-                ei_event_set_active_widget(NULL);
+                if (was_dragging) {
+                    ei_event_set_active_widget(NULL);
+                }
                 ei_app_invalidate_rect(&toplevel->widget.screen_location);
                 event_handled = true;
             }

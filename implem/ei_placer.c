@@ -14,6 +14,7 @@ void ei_impl_placer_run(ei_widget_t widget) {
     ei_impl_widget_t* impl_widget = (ei_impl_widget_t*)widget;
     assert(impl_widget->placer_params != NULL && "hmm , pas de placer_params");
 
+
     ei_impl_placer_params_t* params = impl_widget->placer_params;
 
     // Stocker l'ancienne position pour invalidation
@@ -104,6 +105,14 @@ void ei_impl_placer_run(ei_widget_t widget) {
     // **APPELER GEOMNOTIFYFUNC ICI**
     // Il est crucial que geomnotifyfunc soit appelé *après* que screen_location soit à jour,
     // car geomnotifyfunc (surtout pour toplevel) utilise screen_location pour calculer son content_rect.
+    // if (impl_widget->wclass && impl_widget->wclass->geomnotifyfunc) {
+    //     if (impl_widget->geomnotify_in_progress) {
+    //         return;
+    //     }
+    //     impl_widget->geomnotify_in_progress = true;
+    //     impl_widget->wclass->geomnotifyfunc(widget);
+    //     impl_widget->geomnotify_in_progress = false;
+    // }
     if (impl_widget->wclass && impl_widget->wclass->geomnotifyfunc) {
         impl_widget->wclass->geomnotifyfunc(widget);
     }

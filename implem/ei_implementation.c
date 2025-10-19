@@ -269,7 +269,9 @@ uint32_t ei_impl_map_rgba(ei_surface_t surface, ei_color_t color)
     ((uint8_t*)&pixel)[ir] = color.red;
     ((uint8_t*)&pixel)[ig] = color.green;
     ((uint8_t*)&pixel)[ib] = color.blue;
-    ((uint8_t*)&pixel)[ia] = color.alpha;
+    if (ia >= 0) {
+        ((uint8_t*)&pixel)[ia] = color.alpha;
+    }
     return pixel;
 }
 

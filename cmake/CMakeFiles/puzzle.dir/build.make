@@ -76,15 +76,15 @@ CMakeFiles/puzzle.dir/tests/puzzle.c.o: CMakeFiles/puzzle.dir/flags.make
 CMakeFiles/puzzle.dir/tests/puzzle.c.o: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/puzzle.c
 CMakeFiles/puzzle.dir/tests/puzzle.c.o: CMakeFiles/puzzle.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/puzzle.dir/tests/puzzle.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/puzzle.dir/tests/puzzle.c.o -MF CMakeFiles/puzzle.dir/tests/puzzle.c.o.d -o CMakeFiles/puzzle.dir/tests/puzzle.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/puzzle.c
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/puzzle.dir/tests/puzzle.c.o -MF CMakeFiles/puzzle.dir/tests/puzzle.c.o.d -o CMakeFiles/puzzle.dir/tests/puzzle.c.o -c /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/puzzle.c
 
 CMakeFiles/puzzle.dir/tests/puzzle.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/puzzle.dir/tests/puzzle.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/puzzle.c > CMakeFiles/puzzle.dir/tests/puzzle.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/puzzle.c > CMakeFiles/puzzle.dir/tests/puzzle.c.i
 
 CMakeFiles/puzzle.dir/tests/puzzle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/puzzle.dir/tests/puzzle.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/puzzle.c -o CMakeFiles/puzzle.dir/tests/puzzle.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/tests/puzzle.c -o CMakeFiles/puzzle.dir/tests/puzzle.c.s
 
 # Object files for target puzzle
 puzzle_OBJECTS = \
