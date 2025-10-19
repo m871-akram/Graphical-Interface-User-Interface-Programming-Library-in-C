@@ -1,4 +1,4 @@
-# 🎨 Graphical Interface Programming Library in C# 🧩 ProjetC_IG — Graphical Interface Library in C
+# 🎨 Graphical Interface Library in C
 
 
 
