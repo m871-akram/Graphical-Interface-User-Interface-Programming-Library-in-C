@@ -124,6 +124,14 @@ void draw_horizontal_line(ei_surface_t surface, int x1, int x2, int y, ei_color_
  */
 bool intersection_rect(ei_rect_t* dest, const ei_rect_t* a, const ei_rect_t* b);
 
+/**
+ * @brief   Clamps a rectangle to surface boundaries to prevent out-of-bounds drawing.
+ *
+ * @param   rect        The rectangle to clamp (modified in place).
+ * @param   surface     The surface whose boundaries to use for clamping.
+ */
+void clamp_rect_to_surface(ei_rect_t* rect, ei_surface_t surface);
+
 
 /**
  * \brief	A structure storing the placement parameters of a widget.

@@ -1,5 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -DPython_EXECUTABLE=/Users/mohammedakramlrhorfi/miniforge3/bin/python -DPython3_EXECUTABLE=/Users/mohammedakramlrhorfi/miniforge3/bin/python -S /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C -B /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake-build-debug
--- Building for MacOS
--- Configuring done (0.2s)
--- Generating done (0.1s)
--- Build files have been written to: /Users/mohammedakramlrhorfi/CLionProjects/Graphical-Interface-User-Interface-Programming-Library-in-C/cmake-build-debug

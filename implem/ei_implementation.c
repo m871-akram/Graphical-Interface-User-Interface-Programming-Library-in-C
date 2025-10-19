@@ -26,6 +26,12 @@ void draw_line(ei_surface_t surface, ei_point_t point_1, ei_point_t point_2, ei_
         clip_xmax = clip_xmin + clipper->size.width - 1;
         clip_ymax = clip_ymin + clipper->size.height - 1;
     }
+    
+    // Clamp clipper to surface boundaries
+    if (clip_xmin < 0) clip_xmin = 0;
+    if (clip_ymin < 0) clip_ymin = 0;
+    if (clip_xmax >= taille_surface.width) clip_xmax = taille_surface.width - 1;
+    if (clip_ymax >= taille_surface.height) clip_ymax = taille_surface.height - 1;
 
     // On récupère les coordonnées des deux points
     int x1 = point_1.x, y1 = point_1.y;
@@ -46,18 +52,15 @@ void draw_line(ei_surface_t surface, ei_point_t point_1, ei_point_t point_2, ei_
     // On initialise une erreur pour l'algo de Bresenham (ça aide à choisir les bons pixels)
     int E = dirige_par_x ? dy : dx;
 
-    // On calcule où est le premier pixel dans le buffer
-    uint8_t* pixel_ptr = pixel_0 + (y1 * taille_surface.width +x1 )* 4;
-    int ligne_increment = sy * taille_surface.width * 4; // Pour sauter à la ligne suivante
-    int pixel_increment = sx * 4; // Pour bouger d'un pixel
-
     // Boucle pour dessiner la ligne pixel par pixel
     while (true) {
         // On dessine seulement si le pixel est dans la zone autorisée
         if (x >= 0 && x < taille_surface.width && y >= 0 && y < taille_surface.height &&
                     x >= clip_xmin && x <= clip_xmax && y >= clip_ymin && y <= clip_ymax) {
-            *(uint32_t*)pixel_ptr = valeur_pixel;
-                    }
+            // Calculer la position du pixel de manière sûre
+            uint32_t* pixel_ptr = (uint32_t*)(pixel_0 + (y * taille_surface.width + x) * 4);
+            *pixel_ptr = valeur_pixel;
+        }
 
         // Si on est arrivé au point final, on arrête
         if (x == x2 && y == y2) {
@@ -68,21 +71,17 @@ void draw_line(ei_surface_t surface, ei_point_t point_1, ei_point_t point_2, ei_
         if (dirige_par_x) {
             // Si la ligne est plus horizontale
             x += sx;
-            pixel_ptr += pixel_increment;
             E += dy;
             if (2 * E > dx) {
                 y += sy;
-                pixel_ptr += ligne_increment;
                 E -= dx;
             }
         } else {
             // Si la ligne est plus verticale
             y += sy;
-            pixel_ptr += ligne_increment;
             E += dx;
             if (2 * E > dy) {
                 x += sx;
-                pixel_ptr += pixel_increment;
                 E -= dy;
             }
         }
@@ -118,6 +117,12 @@ void draw_horizontal_line(ei_surface_t surface, int x1, int x2, int y, ei_color_
         clip_ymin = clipper->top_left.y;
         clip_ymax = clipper->top_left.y + clipper->size.height - 1;
     }
+    
+    // Clamp clipper to surface boundaries
+    if (clip_xmin < 0) clip_xmin = 0;
+    if (clip_ymin < 0) clip_ymin = 0;
+    if (clip_xmax >= taille_surface.width) clip_xmax = taille_surface.width - 1;
+    if (clip_ymax >= taille_surface.height) clip_ymax = taille_surface.height - 1;
 
     // Si y est hors de la zone, on ne dessine rien
     if (y < clip_ymin || y > clip_ymax || y < 0 || y >= taille_surface.height) return;
@@ -299,6 +304,34 @@ bool intersection_rect(ei_rect_t* dest, const ei_rect_t* a, const ei_rect_t* b) 
     // No intersection: set dest to zero rectangle
     *dest = (ei_rect_t){{0, 0}, {0, 0}};
     return false;
+}
+
+void clamp_rect_to_surface(ei_rect_t* rect, ei_surface_t surface) {
+    assert(rect != NULL && surface != NULL);
+    
+    ei_size_t surface_size = hw_surface_get_size(surface);
+    
+    // Clamp top-left to [0, size-1]
+    if (rect->top_left.x < 0) {
+        rect->size.width += rect->top_left.x; // Reduce width by the negative offset
+        rect->top_left.x = 0;
+    }
+    if (rect->top_left.y < 0) {
+        rect->size.height += rect->top_left.y; // Reduce height by the negative offset
+        rect->top_left.y = 0;
+    }
+    
+    // Clamp size to not exceed surface boundaries
+    if (rect->top_left.x + rect->size.width > surface_size.width) {
+        rect->size.width = surface_size.width - rect->top_left.x;
+    }
+    if (rect->top_left.y + rect->size.height > surface_size.height) {
+        rect->size.height = surface_size.height - rect->top_left.y;
+    }
+    
+    // Ensure size is not negative
+    if (rect->size.width < 0) rect->size.width = 0;
+    if (rect->size.height < 0) rect->size.height = 0;
 }
 
 

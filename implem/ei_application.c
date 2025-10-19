@@ -243,20 +243,30 @@ void ei_app_invalidate_rect(const ei_rect_t* rect) {
         return;
     }
 
+    if (g_root_surface == NULL) {
+        return;
+    }
+
+    ei_rect_t clipped_rect = *rect;
+    clamp_rect_to_surface(&clipped_rect, g_root_surface);
+    if (clipped_rect.size.width <= 0 || clipped_rect.size.height <= 0) {
+        return;
+    }
+
     // Fusionner avec les rectangles existants si possible
     ei_linked_rect_t* current = g_invalidated_rects_head;
     ei_linked_rect_t* prev = NULL;
     while (current) {
         // Vérifier si le nouveau rectangle intersecte ou est adjacent
-        int dx = max(current->rect.top_left.x, rect->top_left.x) -
+        int dx = max(current->rect.top_left.x, clipped_rect.top_left.x) -
                  min(current->rect.top_left.x + current->rect.size.width,
-                     rect->top_left.x + rect->size.width);
-        int dy = max(current->rect.top_left.y, rect->top_left.y) -
+                     clipped_rect.top_left.x + clipped_rect.size.width);
+        int dy = max(current->rect.top_left.y, clipped_rect.top_left.y) -
                  min(current->rect.top_left.y + current->rect.size.height,
-                     rect->top_left.y + rect->size.height);
+                     clipped_rect.top_left.y + clipped_rect.size.height);
         if (dx <= 0 && dy <= 0) {
             // Fusionner les rectangles
-            current->rect = rect_union(&current->rect, rect);
+            current->rect = rect_union(&current->rect, &clipped_rect);
             return;
         }
         prev = current;
@@ -269,7 +279,7 @@ void ei_app_invalidate_rect(const ei_rect_t* rect) {
         fprintf(stderr, "Erreur: Impossible d'allouer un rectangle invalidé.\n");
         return;
     }
-    new_node->rect = *rect;
+    new_node->rect = clipped_rect;
     new_node->next = g_invalidated_rects_head;
     g_invalidated_rects_head = new_node;
 }

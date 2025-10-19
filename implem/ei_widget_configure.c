@@ -829,7 +829,13 @@ void toplevel_drawfunc(ei_widget_t widget, ei_surface_t surface, ei_surface_t pi
     ei_impl_toplevel_t* toplevel = (ei_impl_toplevel_t*)widget;
     ei_rect_t draw_rect = toplevel->widget.screen_location;
     if (clipper && !intersection_rect(&draw_rect, &toplevel->widget.screen_location, clipper)) {
-        return; // Pas d’intersection
+        return; // Pas d'intersection
+    }
+    
+    // Clamp draw_rect to surface boundaries to prevent out-of-bounds drawing
+    clamp_rect_to_surface(&draw_rect, surface);
+    if (draw_rect.size.width <= 0 || draw_rect.size.height <= 0) {
+        return; // Nothing to draw
     }
 
     // D'abord, remplir la surface de picking avec la couleur du toplevel.
@@ -943,7 +949,13 @@ bool toplevel_handlefunc(ei_widget_t widget, ei_event_t* event) {
                 }
 
                 if (toplevel->closable && point_in_rect(click_pos, &toplevel->close_button_rect)) {
-                    if (toplevel->widget.destructor) toplevel->widget.destructor(widget);
+                    // Invalider la zone avant de détruire
+                    ei_app_invalidate_rect(&toplevel->widget.screen_location);
+                    // Désactiver le widget s'il est actif pour éviter les références pendantes
+                    if (ei_event_get_active_widget() == widget) {
+                        ei_event_set_active_widget(NULL);
+                    }
+                    // Détruire le widget (qui appellera automatiquement le destructeur utilisateur)
                     ei_widget_destroy(widget);
                     event_handled = true;
                 } else if (toplevel->resizable != ei_axis_none && point_in_rect(click_pos, &toplevel->resize_handle_rect)) {

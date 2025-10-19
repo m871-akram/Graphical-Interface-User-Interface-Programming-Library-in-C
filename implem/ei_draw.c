@@ -15,13 +15,24 @@ void ei_fill(ei_surface_t surface, const ei_color_t* couleur, const ei_rect_t* c
     // Convertir la couleur selon l'ordre des canaux de la surface (toujours via map_rgba pour éviter les erreurs de canaux/alpha)
     uint32_t valeur_pixel = ei_impl_map_rgba(surface, *couleur);
 
-    // On définit la zone qu’on va remplir (le clipper, c’est comme une fenêtre où on a le droit de peindre)
+    // On définit la zone qu'on va remplir (le clipper, c'est comme une fenêtre où on a le droit de peindre)
     int clip_xmin = 0, clip_ymin = 0, clip_xmax = taille_surface.width - 1, clip_ymax = taille_surface.height - 1;
     if (clipper != NULL) {
         clip_xmin = clipper->top_left.x;
         clip_ymin = clipper->top_left.y;
         clip_xmax = clip_xmin + clipper->size.width - 1;
         clip_ymax = clip_ymin + clipper->size.height - 1;
+    }
+    
+    // Clamp to surface boundaries to prevent buffer overflow
+    if (clip_xmin < 0) clip_xmin = 0;
+    if (clip_ymin < 0) clip_ymin = 0;
+    if (clip_xmax >= taille_surface.width) clip_xmax = taille_surface.width - 1;
+    if (clip_ymax >= taille_surface.height) clip_ymax = taille_surface.height - 1;
+    
+    // Early exit if clipping region is invalid
+    if (clip_xmin > clip_xmax || clip_ymin > clip_ymax) {
+        return;
     }
 
     // On remplit juste la zone du clipper, ligne par ligne
@@ -88,7 +99,11 @@ void ei_draw_polygon(ei_surface_t surface, ei_point_t* points, size_t taille_poi
     if (clip_ymin > clip_ymax) return;
 
     // On crée une table pour stocker les côtés (avec calloc, merci <stdlib.h> !)
-    edge_t** table_cotes = calloc(clip_ymax - clip_ymin, sizeof(edge_t));
+    // +1 pour inclure à la fois clip_ymin et clip_ymax, sizeof(edge_t*) car c'est un tableau de pointeurs
+    int table_size = clip_ymax - clip_ymin + 1;
+    edge_t** table_cotes = calloc(table_size, sizeof(edge_t*));
+    if (!table_cotes) return; // Si allocation échoue, on sort
+    
     // On remplit la table avec les arêtes du polygone
     creer_table_tc(points, taille_points, table_cotes, clip_ymin, clip_ymax);
 
@@ -101,14 +116,15 @@ void ei_draw_polygon(ei_surface_t surface, ei_point_t* points, size_t taille_poi
         supprimer_arete_tca(y, &tca);
 
         // On ajoute les nouvelles arêtes qui commencent à cette ligne
-        if ((y - clip_ymin) >= 0 && (y - clip_ymin) < clip_ymax - clip_ymin + 1) {
-            edge_t* cote = table_cotes[y - clip_ymin];
+        int table_index = y - clip_ymin;
+        if (table_index >= 0 && table_index < table_size) {
+            edge_t* cote = table_cotes[table_index];
             while (cote != NULL) {
                 edge_t* next = cote->next;
-                ajoute_arete_tca(cote, &tca); // On met l’arête dans la TCA
+                ajoute_arete_tca(cote, &tca); // On met l'arête dans la TCA
                 cote = next;
             }
-            table_cotes[y - clip_ymin] = NULL; // On vide cette case
+            table_cotes[table_index] = NULL; // On vide cette case
         }
 
         // On trie la TCA pour avoir les arêtes dans l’ordre des x
@@ -143,7 +159,7 @@ void ei_draw_polygon(ei_surface_t surface, ei_point_t* points, size_t taille_poi
         free(u);
     }
     // On nettoie aussi la table des côtés
-    for (int i = 0; i < clip_ymax - clip_ymin + 1; i++) {
+    for (int i = 0; i < table_size; i++) {
         edge_t* cote = table_cotes[i];
         while (cote != NULL) {
             edge_t* u = cote;
