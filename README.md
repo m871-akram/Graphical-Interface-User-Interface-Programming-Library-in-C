@@ -7,7 +7,7 @@ This project provides a complete toolkit for creating windows, widgets, drawing,
 
 ## 🧱 Tech Stack
 
-- Language: C
+- Language: C and C++
 - Build system: CMake (min 3.20)
 - Library layout: Static library `ei` + example executables
 - Dependencies (linked in CMake): SDL2, SDL2_ttf, FreeImage, platform shim `eibase` from `./_macos`, `./_x11`, or `./_win`
